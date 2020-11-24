@@ -1,0 +1,26 @@
+{
+  "name": "Bot-role-discord",
+  "version": "1.0.0",
+  "description": "Affect roles base on reaction to message",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lulubull/Bot-role-discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lulubull/Bot-role-discord/issues"
+  },
+  "homepage": "https://github.com/lulubull/Bot-role-discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.0",
+    "discord.js-commando": "git+https://github.com/discordjs/Commando.git",
+    "dotenv": "^8.2.0",
+    "winston": "^3.3.3"
+  }
+}
