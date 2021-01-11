@@ -27,7 +27,7 @@ module.exports = class HelloCommand extends Command {
 			.setAuthor(`${this.client.user.tag}`, `${this.client.user.displayAvatarURL()}`)
 			.setDescription(`Bonjour,
 				Ceci est un message de la plus haute importance.
-				Veuillez réagire avec l'émoji associé au jeu voulu.
+				Veuillez réagir avec l'émoji associé au jeu voulu.
 
 				Rocket League : 🚙
 				Stellaris : ✨

@@ -33,13 +33,54 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
     if (user.username != 'Role_binder') {
         let guild = reaction.message.guild
-        let index_emoji = reaction.message.content.indexOf('👍')
-        let role_name = reaction.message.content.slice(19,index_emoji-13)
+        let role_name = '';
+        switch(reaction.emoji.name){
+            case '🚙' :
+                role_name = "Rocket League";
+                break;
+            case '✨' :
+                role_name = "Stellaris";
+                break;
+            case '🧨' :
+                role_name = "CS:GO";
+                break;
+            case '❄️' :
+                role_name = "Project Winter";
+                break;
+            case '🧟‍♂️' :
+                role_name = "Hunt : Showdown";
+                break;
+            case '👻' :
+                role_name = "SCP: Secret Laboratory";
+                break;
+            case '🔫' :
+                role_name = "VALORANT";
+                break;
+            case '🎨' :
+                role_name = "Scribbl.io";
+                break;
+            case '🌩' :
+                role_name = "HOTS";
+                break;
+            case '🏰' :
+                role_name = "AoE III";
+                break;
+            case '🍀' :
+                role_name = "TFT";
+                break;
+            case '🚶‍♂️' :
+                role_name = "Garry's Mod";
+                break;
+            case '🎭' :
+                role_name = "Among Us";
+                break;
+        }
+
+        const member = guild.member(user);
+
         const role = guild.roles.cache
         .filter(role => role.name === role_name)
         .first();
-
-        const member = guild.member(user);
 
         member.roles.add(role);
 
@@ -56,13 +97,55 @@ client.on('messageReactionRemove', async (reaction, user) => {
     }
     if (user.username != 'Role_binder') {
         let guild = reaction.message.guild
-        let index_emoji = reaction.message.content.indexOf('👍')
-        let role_name = reaction.message.content.slice(19,index_emoji-13)
+        
+        let role_name = '';
+        switch(reaction.emoji.name){
+            case '🚙' :
+                role_name = "Rocket League";
+                break;
+            case '✨' :
+                role_name = "Stellaris";
+                break;
+            case '🧨' :
+                role_name = "CS:GO";
+                break;
+            case '❄️' :
+                role_name = "Project Winter";
+                break;
+            case '🧟‍♂️' :
+                role_name = "Hunt : Showdown";
+                break;
+            case '👻' :
+                role_name = "SCP: Secret Laboratory";
+                break;
+            case '🔫' :
+                role_name = "VALORANT";
+                break;
+            case '🎨' :
+                role_name = "Scribbl.io";
+                break;
+            case '🌩' :
+                role_name = "HOTS";
+                break;
+            case '🏰' :
+                role_name = "AoE III";
+                break;
+            case '🍀' :
+                role_name = "TFT";
+                break;
+            case '🚶‍♂️' :
+                role_name = "Garry's Mod";
+                break;
+            case '🎭' :
+                role_name = "Among Us";
+                break;
+        }
+
+        const member = guild.member(user);
+        
         const role = guild.roles.cache
         .filter(role => role.name === role_name)
         .first();
-
-        const member = guild.member(user);
 
         member.roles.remove(role);
 
